@@ -27,7 +27,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # --- モデルのロード ---
 loaded_model = SimpleMLP().to(device)
 # モデルのパラメータをロード（weights_only=True を指定）
-loaded_model.load_state_dict(torch.load("modelwithBatch.pth", map_location=device, weights_only=True))
+loaded_model.load_state_dict(torch.load("modelwithBatch(2).pth", map_location=device, weights_only=True))
 loaded_model.eval()  # 推論モードに設定
 
 st.title("Digit Classification with SimpleMLP")
